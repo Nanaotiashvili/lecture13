@@ -2,10 +2,10 @@
 .container {
     max-width: 1165px;
     margin: 0 auto;
-    background-color: $mycolor;
     .head {
         display: flex;
         gap: 35px;
+        align-items: center;
        
         a { 
             color: #000;
@@ -32,15 +32,7 @@
                 background-color: red;
             @include mycards;
             .textimg {
-                color: #FFF;
-                font-family: Roboto;
-                font-size: 20px;
-                font-style: normal;
-                font-weight: 700;
-                line-height: normal;
-                width: 184px;
-                margin-top: 32px;
-                margin-left: 41px;
+                @include textimg1;
             }
             }
             .p1 {
@@ -56,7 +48,78 @@
                     @include text1;
                 }
             }
-           
+            .img2 {
+                background-image: url(../images/ocean2.png);
+                background-color: red;
+            @include mycards;
+            .textimg {
+                @include textimg1;
+            }
+            }
+            .img3 {
+                background-image: url(../images/ocean3.png);
+                background-color: red;
+            @include mycards;
+            .textimg {
+                @include textimg1;
+            }
+            }
         }
     }
+    .cards2 {
+        display: flex;
+        gap: 45px;
+        .card2 {
+            max-width: 758px;
+            display: flex;
+            flex-direction: column;
+            .img4 { display: inline-block;
+                    position: relative;
+            }
+            .textimg2 {
+                @include textimg1;
+                top: 50%;
+                left: 50%;
+                transform:translate(-50%, -50%) ;
+            }
+        }
+        .card1 {
+            display: flex;
+            flex-direction: column;
+            gap: 103px;
+        }
+    }
+    .foots {
+        display: flex;
+        gap: 118px;
+        justify-content: space-between;
+        padding-top: 59px;
+        padding-left: 30px;
+        .list {
+            display: flex;
+            flex-direction: column;
+            gap: 21px;
+            a {
+                color: #818687;
+                font-family: Roboto;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+            }
+        }
+        .p2 {
+            color: #FFF;
+            font-family: Roboto;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+    }    
 }
+body {
+    background-color: #F1F1F1;;
+}
+footer {margin-top: 36px;
+background-color: #243043;;}
